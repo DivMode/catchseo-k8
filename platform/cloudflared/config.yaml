@@ -1,4 +1,4 @@
-# NOTE: Search + Replace example.com with your own Cloudflared domain before enabling
+# NOTE: Search + Replace catchseo.com with your own Cloudflared domain before enabling
 tunnel: reclaim-the-stack
 credentials-file: /etc/cloudflared/credentials/credentials.json
 metrics: 0.0.0.0:2000
@@ -6,14 +6,14 @@ no-autoupdate: true
 # For more about ingress rules, see
 # https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ingress
 ingress:
-  - hostname: argocd.example.com
+  - hostname: argocd.catchseo.com
     service: https://argocd-server.argocd.svc
     originRequest:
       noTLSVerify: true
-  - hostname: grafana.example.com
+  - hostname: grafana.catchseo.com
     service: http://monitoring-grafana.monitoring.svc
   # Applications:
-  # - hostname: <application>.example.com
+  # - hostname: <application>.catchseo.com
   #   service: http://<application>-web
   # This rule matches any traffic which didn't match a previous rule and returns 404:
   - service: http_status:404
